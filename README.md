@@ -35,7 +35,6 @@ The analysis is divided into multiple parts:
 
 `TS% = (Points Scored) / (2 * (Field Goal Attempts + 0.44 * Free Throw Attempts)) * 100`
 
-
 - Aggregated player statistics per season and filtered players with at least 1000 shooting attempts for reliability.
 
 ---
@@ -49,24 +48,32 @@ The analysis is divided into multiple parts:
   - AC era players are generally taller, heavier, and have more variability in age.
   - BC players played more games and had higher minutes per game; AC players include more low-minute and low-game appearances.
 
+**Height Distribution (BC vs AC):**  
+![Height Comparison](https://github.com/D1Massacre007/NBA-Analytics/blob/efead3302a659b603b6f4028545705d01475113b/output1.png)
+
 ---
 
 ### Part 3: Game Analysis
-- Focused on 3-point shooting trends and statistical changes between BC and AC.
+- Focused on gameplay trends and statistical changes between BC and AC.
 - Applied **t-tests** to examine if changes in metrics like `3PAPG`, `FPG`, and `TOVPG` were statistically significant.
-- Key insights:
-  - All analyzed metrics showed statistically significant differences between BC and AC (p-value < 0.05), indicating shifts in gameplay style over Curry’s era.
+- Observations:
+  - Metrics like TOVPG and FPG showed statistically significant differences (p-value < 0.05), indicating shifts in gameplay style.
+
+**BC vs AC Turnovers and Fouls Per Game:**  
+![TOVPG and FPG Comparison](https://github.com/D1Massacre007/NBA-Analytics/blob/efead3302a659b603b6f4028545705d01475113b/output6.png)
 
 ---
 
 ### Part 4: In Praise of Stephen Curry
 - Isolated Stephen Curry’s statistics and compared them with the rest of the league.
-- Visualized Curry’s efficiency using scatter plots for:
+- Visualized Curry’s efficiency using **scatter plots** for:
   - `3PMPG` vs. `3PAPG` (3-point performance)
   - `FGMPG` vs. `FGAPG` (field goal performance)
 - Observations:
   - Curry is an **outlier in efficiency**, outperforming most other NBA players in his era.
-  - His playing style coincides with higher league-wide shooting metrics in AC, though causality cannot be definitively proven.
+
+**Scatter Plots Comparing Curry with AC Players:**  
+![Curry vs AC Players](https://github.com/D1Massacre007/NBA-Analytics/blob/efead3302a659b603b6f4028545705d01475113b/output7.png)
 
 ---
 
@@ -80,8 +87,8 @@ While statistical tests show significant differences in NBA gameplay metrics aft
 - `pandas`, `numpy` – Data handling  
 - `matplotlib`, `seaborn` – Visualizations  
 - `scipy.stats` – Statistical testing  
+ 
 
----
 
 ## Key Takeaways
 - NBA players’ physical attributes and playing styles have evolved significantly between BC and AC eras.  
